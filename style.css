@@ -209,7 +209,7 @@ button {
 .class-content {
     position: relative;
 
-    height: 150px;
+    height: 140px;
 
     padding: 18px;
 
@@ -331,7 +331,7 @@ button {
 .tile {
     position: relative;
 
-    min-height: 120px;
+    min-height: 130px;
 
     display: flex;
 
