@@ -191,7 +191,7 @@ button {
 }
 
 .timetable-card {
-    flex: 0 0 300px;
+    flex: 0 0 calc((100vw - 40px) / 2);
 
     border-radius: 15px;
 
@@ -331,7 +331,7 @@ button {
 .tile {
     position: relative;
 
-    min-height: 135px;
+    min-height: 120px;
 
     display: flex;
 
@@ -1401,16 +1401,13 @@ body {
 /* =====================================================
    iPHONE 16 - FINAL COMPACT LAYOUT
 ===================================================== */
-
 @media screen and (max-width: 430px) {
-
-    /* ---------- PAGE ---------- */
 
     html,
     body {
-        width: 100%;
         margin: 0;
         padding: 0;
+        width: 100%;
         overflow-x: hidden;
     }
 
@@ -1424,226 +1421,216 @@ body {
     }
 
 
-    /* ---------- HEADER ---------- */
+    /* ================= HEADER ================= */
 
     .header {
-        width: 100%;
-        height: 70px;
-
-        grid-template-columns: 45px 1fr 45px;
-
-        padding: 0 10px;
+        height: 62px;
+        grid-template-columns: 42px 1fr 42px;
+        padding: 0 8px;
     }
 
     .header h1 {
-        font-size: 24px;
+        font-size: 22px;
         font-weight: 400;
         letter-spacing: 0;
     }
 
     .menu-btn {
-        width: 38px;
-        height: 38px;
+        width: 36px;
+        height: 36px;
     }
 
     .menu-btn span {
-        width: 29px;
-        height: 4px;
+        width: 27px;
+        height: 3px;
     }
 
     .notification-btn {
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
     }
 
     .notification-btn svg {
-        width: 28px;
-        height: 28px;
+        width: 25px;
+        height: 25px;
     }
 
     .notification-count {
-        top: -4px;
-        right: -5px;
-
-        padding: 4px 6px;
-
-        font-size: 12px;
-        border-radius: 7px;
+        top: -3px;
+        right: -4px;
+        padding: 3px 5px;
+        font-size: 11px;
     }
 
 
-    /* ---------- TIMETABLE ---------- */
+    /* ================= TIMETABLE ================= */
 
     .timetable-section {
-        padding: 10px 15px 18px;
+        padding: 8px 15px 12px;
     }
 
     .section-title-row {
-        margin-bottom: 15px;
+        margin-bottom: 12px;
     }
 
     .section-title-row h2 {
-        font-size: 22px;
+        font-size: 20px;
         font-weight: 400;
         white-space: nowrap;
     }
 
     .dost-btn {
-        padding: 8px 11px;
-        border-radius: 10px;
-        font-size: 14px;
+        padding: 7px 10px;
+        font-size: 13px;
+        border-radius: 9px;
     }
 
     .timetable-container {
-        width: 100%;
         display: flex;
-        gap: 12px;
-        overflow-x: auto;
-        scrollbar-width: none;
+        gap: 10px;
+        width: 100%;
+        overflow: hidden;
     }
 
-    .timetable-container::-webkit-scrollbar {
-        display: none;
-    }
-
+    /* TWO CARDS FIT ON SCREEN */
     .timetable-card {
-        flex: 0 0 300px;
-        width: 300px;
-        max-width: 300px;
-        border-radius: 14px;
+        flex: 0 0 calc((100vw - 40px) / 2);
+        width: calc((100vw - 40px) / 2);
+        max-width: none;
+        border-radius: 12px;
     }
 
     .class-content {
-        height: 150px;
-        padding: 18px;
+        height: 125px;
+        padding: 14px;
     }
 
     .class-content h3 {
-        font-size: 21px;
+        font-size: 17px;
         font-weight: 400;
     }
 
     .class-content p {
-        margin-top: 8px;
-        font-size: 15px;
-    }
-
-    .attendance-status {
-        margin-top: 13px;
-        padding: 6px 9px;
-        gap: 6px;
+        margin-top: 6px;
         font-size: 13px;
     }
 
+    .attendance-status {
+        margin-top: 10px;
+        padding: 5px 7px;
+        gap: 5px;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
     .attendance-status span {
-        width: 8px;
-        height: 8px;
+        width: 7px;
+        height: 7px;
     }
 
     .book-watermark {
-        right: 12px;
-        bottom: 10px;
-        font-size: 55px;
+        right: 5px;
+        bottom: 5px;
+        font-size: 42px;
     }
 
     .time {
-        padding: 9px;
-        font-size: 17px;
+        padding: 7px 3px;
+        font-size: 13px;
+        white-space: nowrap;
     }
 
 
-    /* ---------- ADD MORE TILES ---------- */
+    /* ================= ADD MORE TILES ================= */
 
     .tiles-section {
-        padding: 10px 15px 90px;
+        padding: 8px 15px 75px;
     }
 
     .tiles-heading {
-        margin-bottom: 18px;
+        margin-bottom: 13px;
     }
 
     .tiles-heading h2 {
-        font-size: 22px;
+        font-size: 20px;
         font-weight: 400;
     }
 
     .tiles-heading p {
-        margin-top: 8px;
-        font-size: 14px;
-        line-height: 1.35;
+        margin-top: 5px;
+        font-size: 13px;
+        line-height: 1.25;
     }
 
     .plus-btn {
-        width: 45px;
-        height: 45px;
-        font-size: 30px;
+        width: 42px;
+        height: 42px;
+        font-size: 27px;
         flex-shrink: 0;
     }
 
 
-    /* ---------- 3 COLUMN TILES ---------- */
+    /* ================= SIX TILES ================= */
 
     .tiles-grid {
-        width: 100%;
-
         display: grid;
 
-        grid-template-columns:
-            repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(3, 1fr);
 
-        gap: 12px;
+        gap: 9px;
+
+        width: 100%;
     }
 
     .tile {
         min-width: 0;
-        min-height: 135px;
+        min-height: 120px;
 
-        padding: 8px;
+        height: 120px;
 
-        gap: 8px;
+        padding: 6px;
 
-        border-radius: 13px;
-        border: 2px solid #e5e1d5;
+        gap: 6px;
+
+        border-radius: 11px;
     }
 
     .tile.selected {
-        border: 3px solid #ff887c;
+        border-width: 3px;
     }
 
     .tile-badge {
-        top: -10px;
-        right: -7px;
+        top: -7px;
+        right: -5px;
 
-        min-width: 40px;
+        min-width: 34px;
 
-        padding: 7px 8px;
+        padding: 5px 6px;
 
-        border-radius: 8px;
+        border-radius: 7px;
 
-        font-size: 14px;
+        font-size: 11px;
     }
 
     .tile-icon svg {
-        width: 38px;
-        height: 38px;
-
-        stroke-width: 1.5;
+        width: 34px;
+        height: 34px;
     }
 
     .tile-name {
         width: 100%;
 
-        padding: 6px 3px;
+        padding: 5px 2px;
 
-        border-radius: 7px;
+        border-radius: 6px;
 
-        font-size: 12px;
+        font-size: 11px;
 
-        line-height: 1.2;
+        line-height: 1.1;
     }
 
 
-    /* ---------- BOTTOM NAV ---------- */
+    /* ================= BOTTOM NAV ================= */
 
     .bottom-nav {
         position: fixed;
@@ -1655,51 +1642,28 @@ body {
         width: 100%;
         max-width: 393px;
 
-        height: 65px;
+        height: 62px;
 
         grid-template-columns: repeat(4, 1fr);
-
-        background: #fff;
-
-        border-top: 1px solid #ddd;
-
-        z-index: 100;
     }
 
     .nav-item {
-        gap: 2px;
-        font-size: 11px;
+        gap: 1px;
+        font-size: 10px;
     }
 
     .nav-item svg {
-        width: 25px;
-        height: 25px;
+        width: 23px;
+        height: 23px;
     }
 
 
-    /* ---------- DRAWER ---------- */
+    /* ================= DRAWER ================= */
 
     #drawer {
-        position: fixed;
-
-        top: 0;
-        left: 0;
-
         width: 82%;
-        max-width: 325px;
-
+        max-width: 320px;
         height: 100dvh;
-
-        background: white;
-
-        z-index: 1000;
-
-        transform: translateX(-100%);
-
-        transition:
-            transform 0.3s ease;
-
-        overflow-y: auto;
     }
 
     #drawer.active {
@@ -1708,23 +1672,18 @@ body {
 
     #drawer-overlay {
         position: fixed;
-
         inset: 0;
 
         width: 100%;
         height: 100dvh;
 
-        background: rgba(0,0,0,0.35);
-
-        z-index: 999;
-
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
 
-        transition:
-            opacity 0.3s ease,
-            visibility 0.3s ease;
+        background: rgba(0,0,0,0.35);
+
+        z-index: 999;
     }
 
     #drawer-overlay.active {
@@ -1734,152 +1693,74 @@ body {
     }
 
 
-    /* ---------- DRAWER PROFILE ---------- */
+    /* ================= PROFILE ================= */
 
-    .drawer-profile {
-        padding: 28px 18px 24px;
+    .profile-header {
+        height: 64px;
+        padding: 0 10px;
     }
 
-    .drawer-photo {
-        width: 100px;
-        height: 100px;
-    }
-
-    .drawer-profile h2 {
-        margin-top: 12px;
+    .profile-header h2 {
         font-size: 21px;
     }
 
-    .drawer-profile p {
-        margin-top: 7px;
-        font-size: 14px;
+    .back-btn {
+        font-size: 16px;
     }
 
-
-    /* ---------- DRAWER SEARCH ---------- */
-
-    .drawer-search {
-        margin: 15px;
-        padding: 10px 14px;
-    }
-
-    .drawer-search svg {
+    .back-btn svg {
         width: 25px;
         height: 25px;
     }
 
-    .drawer-search input {
-        font-size: 17px;
-    }
-
-
-    /* ---------- DRAWER MENU ---------- */
-
-    .drawer-menu button {
-        min-height: 62px;
-
-        padding: 12px 17px;
-
-        gap: 14px;
-
-        font-size: 16px;
-    }
-
-    .drawer-menu svg {
-        width: 27px;
-        height: 27px;
-    }
-
-
-    /* ---------- PROFILE HEADER ---------- */
-
-    .profile-header {
-        height: 68px;
-
-        padding: 0 12px;
-
-        grid-template-columns:
-            1fr 1fr 1fr;
-    }
-
-    .profile-header h2 {
-        font-size: 22px;
-    }
-
-    .back-btn {
-        font-size: 17px;
-    }
-
-    .back-btn svg {
-        width: 27px;
-        height: 27px;
-    }
-
     .qr-btn {
-        padding: 11px 10px;
-
-        border-radius: 12px;
-
-        font-size: 16px;
+        padding: 10px 9px;
+        font-size: 15px;
+        border-radius: 11px;
     }
-
-
-    /* ---------- PROFILE ---------- */
 
     .profile-content {
-        padding: 10px;
+        padding: 9px;
     }
 
     .profile-card {
-        width: 100%;
-
-        padding: 20px 10px;
-
-        margin-bottom: 18px;
-
-        border-radius: 14px;
+        padding: 18px 9px;
+        margin-bottom: 16px;
+        border-radius: 13px;
     }
 
     .profile-photo {
-        width: 120px;
-        height: 120px;
-
-        border-radius: 15px;
-
-        margin: 0 auto 12px;
+        width: 115px;
+        height: 115px;
+        border-radius: 14px;
     }
 
     .profile-card h2 {
-        font-size: 23px;
-        margin-bottom: 8px;
+        font-size: 21px;
+        margin-bottom: 7px;
     }
 
     .profile-card p {
-        font-size: 14px;
-        line-height: 1.35;
-    }
-
-    .profile-section {
-        margin-bottom: 15px;
+        font-size: 13px;
+        line-height: 1.3;
     }
 
     .profile-section-title {
-        padding: 13px;
-        font-size: 20px;
+        padding: 12px;
+        font-size: 19px;
     }
 
     .profile-data {
-        padding: 17px 20px;
+        padding: 16px 18px;
     }
 
     .profile-data label {
-        margin-top: 16px;
-        font-size: 16px;
+        margin-top: 14px;
+        font-size: 15px;
     }
 
     .profile-data p {
-        margin-top: 4px;
-        font-size: 15px;
-        line-height: 1.4;
+        font-size: 14px;
+        line-height: 1.35;
     }
 }
