@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>UMS Clone</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body>
+    <div class="app">
+      <!-- =====================================================
+         DASHBOARD
+    ====================================================== -->
+
+      <main id="dashboard" class="screen active">
+        <!-- HEADER -->
+
+        <header class="header">
+          <button class="menu-btn" onclick="openDrawer()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <h1>Dashboard</h1>
+
+          <button class="notification-btn">
+            <i data-lucide="bell"></i>
+
+            <span class="notification-count"> 21 </span>
+          </button>
+        </header>
+
+        <!-- =================================================
+             TIMETABLE
+        ================================================== -->
+
+        <section class="timetable-section">
+          <div class="section-title-row">
+            <h2>Today's Timetable</h2>
+
+            <button class="dost-btn">Your Dost</button>
+          </div>
+
+          <div class="timetable-container">
+            <!-- CLASS 1 -->
+
+            <div class="timetable-card">
+              <div class="class-content">
+                <h3>PEL134</h3>
+
+                <p>26-502</p>
+
+                <div class="attendance-status">
+                  <span></span>
+
+                  Not Marked
+                </div>
+
+                <div class="book-watermark">📚</div>
+              </div>
+
+              <div class="time">09:20-10:10 AM</div>
+            </div>
+
+            <!-- CLASS 2 -->
+
+            <div class="timetable-card">
+              <div class="class-content">
+                <h3>CSE205</h3>
+
+                <p>26-502</p>
+
+                <div class="attendance-status">
+                  <span></span>
+
+                  Not Marked
+                </div>
+
+                <div class="book-watermark">📚</div>
+              </div>
+
+              <div class="time">10:10-11:00 AM</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================
+             TILES
+        ================================================== -->
+
+        <section class="tiles-section">
+          <div class="tiles-heading">
+            <div>
+              <h2>Add More Tiles</h2>
+
+              <p>Click on the plus button to add menu grids.</p>
+            </div>
+
+            <button class="plus-btn" onclick="showAddMessage()">+</button>
+          </div>
+
+          <div class="tiles-grid">
+            <!-- ANNOUNCE -->
+
+            <div class="tile">
+              <span class="tile-badge"> 6 </span>
+
+              <div class="tile-icon">
+                <i data-lucide="megaphone"></i>
+              </div>
+
+              <div class="tile-name">Announce</div>
+            </div>
+
+            <!-- EDU REVOLUTION -->
+
+            <div class="tile selected">
+              <div class="tile-icon">
+                <i data-lucide="graduation-cap"></i>
+              </div>
+
+              <div class="tile-name">
+                Edu<br />
+                Revolution
+              </div>
+            </div>
+
+            <!-- FEE -->
+
+            <div class="tile">
+              <div class="tile-icon">
+                <i data-lucide="wallet-cards"></i>
+              </div>
+
+              <div class="tile-name">
+                Fee<br />
+                Statement
+              </div>
+            </div>
+
+            <!-- ATTENDANCE -->
+
+            <div class="tile">
+              <span class="tile-badge"> 81 % </span>
+
+              <div class="tile-icon">
+                <i data-lucide="clipboard-check"></i>
+              </div>
+
+              <div class="tile-name">Attendance</div>
+            </div>
+
+            <!-- ASSIGNMENT -->
+
+            <div class="tile">
+              <span class="tile-badge"> 7 </span>
+
+              <div class="tile-icon">
+                <i data-lucide="notebook-pen"></i>
+              </div>
+
+              <div class="tile-name">Assignment</div>
+            </div>
+
+            <!-- RESULTS -->
+
+            <div class="tile">
+              <span class="tile-badge"> 9.07 </span>
+
+              <div class="tile-icon">
+                <i data-lucide="chart-column"></i>
+              </div>
+
+              <div class="tile-name">Results</div>
+            </div>
+
+            <!-- EXAMS -->
+
+            <div class="tile">
+              <span class="tile-badge"> 13 </span>
+
+              <div class="tile-icon">
+                <i data-lucide="file-check-2"></i>
+              </div>
+
+              <div class="tile-name">Exams</div>
+            </div>
+
+            <!-- RMS -->
+
+            <div class="tile">
+              <div class="tile-icon">
+                <i data-lucide="calendar-check"></i>
+              </div>
+
+              <div class="tile-name">RMS Status</div>
+            </div>
+
+            <!-- PRACTICAL -->
+
+            <div class="tile">
+              <div class="tile-icon">
+                <i data-lucide="calendar-heart"></i>
+              </div>
+
+              <div class="tile-name">
+                Practical<br />
+                Feedback
+              </div>
+            </div>
+
+            <!-- LIST -->
+
+            <div class="tile">
+              <span class="tile-badge"> X </span>
+
+              <div class="tile-icon">
+                <i data-lucide="qr-code"></i>
+              </div>
+
+              <div class="tile-name">List of</div>
+            </div>
+
+            <!-- TIMETABLE TILE -->
+
+            <div class="tile">
+              <span class="tile-badge"> X </span>
+
+              <div class="tile-icon">
+                <i data-lucide="qr-code"></i>
+              </div>
+
+              <div class="tile-name">Time table</div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- =====================================================
+         PROFILE
+    ====================================================== -->
+
+      <main id="profile" class="screen">
+        <!-- PROFILE HEADER -->
+
+        <header class="profile-header">
+          <button class="back-btn" onclick="showDashboard()">
+            <i data-lucide="chevron-left"></i>
+
+            <span> Back </span>
+          </button>
+
+          <h2>Profile</h2>
+
+          <button class="qr-btn">(QR)</button>
+        </header>
+
+        <!-- PROFILE CONTENT -->
+
+        <div class="profile-content">
+          <!-- PROFILE CARD -->
+
+          <div class="profile-card">
+            <img
+              src="assets/profile.jpg"
+              class="profile-photo"
+              alt="Harsh Gajrani"
+            />
+
+            <h2>Harsh Gajrani</h2>
+
+            <p>P132:B.Tech. (Computer Science and Engineering)(2025)</p>
+          </div>
+
+          <!-- =================================================
+                 BASIC
+            ================================================== -->
+
+          <section class="profile-section">
+            <div class="profile-section-title">Basic</div>
+
+            <div class="profile-data">
+              <label> Father's Name </label>
+
+              <p>Tekchand</p>
+
+              <label> Mother's Name </label>
+
+              <p>Laxmi Devi</p>
+
+              <label> Permanent Address </label>
+
+              <p>
+                32 F, P.O. Arayan, Sri Ganganagar - 335027 - Distt: Sri
+                Ganganagar - (Rajasthan) - India
+              </p>
+
+              <label> Correspondence Address </label>
+
+              <p>
+                32 F, P.O. Arayan, Sri Ganganagar - 335027 - Distt: Sri
+                Ganganagar - (Rajasthan) - India
+              </p>
+
+              <label> Contact No. </label>
+
+              <p>8852850129</p>
+
+              <label> Email </label>
+
+              <p>harshgajrani24@gmail.com</p>
+
+              <label> Date Of Birth </label>
+
+              <p>24 Apr 2007</p>
+
+              <label> Student Gender </label>
+
+              <p>Male</p>
+            </div>
+          </section>
+
+          <!-- =================================================
+                 ACADEMIC
+            ================================================== -->
+
+          <section class="profile-section">
+            <div class="profile-section-title">Academic Details</div>
+
+            <div class="profile-data">
+              <label> Program </label>
+
+              <p>P132:B.Tech. (Computer Science and Engineering)(2025)</p>
+
+              <label> Admission Session </label>
+
+              <p>2025-1</p>
+
+              <label> Batch </label>
+
+              <p>2025</p>
+
+              <label> Section </label>
+
+              <p>K4P25SW</p>
+
+              <label> TPC </label>
+
+              <p>20339::Dr. Usha Mittal (01824520140)</p>
+            </div>
+          </section>
+
+          <!-- =================================================
+                 HOSTEL
+            ================================================== -->
+
+          <section class="profile-section">
+            <div class="profile-section-title">Hostel Details</div>
+
+            <div class="profile-data">
+              <label> Hostel </label>
+
+              <p>
+                Boys Hostel-06- B720-Bed A (Standard Air Conditioned 4 Seater)
+              </p>
+
+              <label> Warden </label>
+
+              <p>34862::Karnail Singh Jaryal (9501110445)</p>
+
+              <label> Allocated Mess </label>
+
+              <p>-</p>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <!-- =====================================================
+         DRAWER OVERLAY
+    ====================================================== -->
+
+      <div
+        id="drawer-overlay"
+        class="drawer-overlay"
+        onclick="closeDrawer()"
+      ></div>
+
+      <!-- =====================================================
+         SIDE DRAWER
+    ====================================================== -->
+
+      <aside id="drawer" class="drawer">
+        <!-- PROFILE -->
+
+        <div class="drawer-profile" onclick="showProfile()">
+          <img
+            src="assets/profile.jpg"
+            class="drawer-photo"
+            alt="Harsh Gajrani"
+          />
+
+          <h2>Harsh Gajrani</h2>
+
+          <p>12527877</p>
+
+          <p>P132:B.Tech. (Computer Science and Engineering)(2025)</p>
+        </div>
+
+        <!-- SEARCH -->
+
+        <div class="drawer-search">
+          <i data-lucide="search"></i>
+
+          <input type="text" placeholder="Search" />
+        </div>
+
+        <!-- MENU -->
+
+        <nav class="drawer-menu">
+          <button>
+            <i data-lucide="user-check"></i>
+            Attendance
+          </button>
+
+          <button>
+            <i data-lucide="qr-code"></i>
+            Placement Barcode Scanner
+          </button>
+
+          <button>
+            <i data-lucide="calendar-plus"></i>
+            Book Appointment
+          </button>
+
+          <button>
+            <i data-lucide="file-text"></i>
+            Transport Preference
+          </button>
+
+          <button>
+            <i data-lucide="log-out"></i>
+            Change UMS Password
+          </button>
+
+          <button>
+            <i data-lucide="file-chart-column"></i>
+            View Marks
+          </button>
+
+          <button>
+            <i data-lucide="newspaper"></i>
+            Event Attendance
+          </button>
+
+          <button>
+            <i data-lucide="stethoscope"></i>
+            Doctor Appointment
+          </button>
+
+          <button>
+            <i data-lucide="file-up"></i>
+            Document Upload
+          </button>
+        </nav>
+
+        <!-- LOGOUT -->
+
+        <button class="logout">
+          Logout
+
+          <i data-lucide="log-out"></i>
+        </button>
+      </aside>
+
+      <!-- =====================================================
+         BOTTOM NAVIGATION
+    ====================================================== -->
+
+      <nav class="bottom-nav">
+        <button class="nav-item active">
+          <i data-lucide="layout-grid"></i>
+
+          <span> Dashboard </span>
+        </button>
+
+        <button class="nav-item">
+          <i data-lucide="newspaper"></i>
+
+          <span> Happenings </span>
+        </button>
+
+        <button class="nav-item">
+          <i data-lucide="square-pen"></i>
+
+          <span> RMS </span>
+        </button>
+
+        <button class="nav-item">
+          <i data-lucide="list"></i>
+
+          <span> View Marks </span>
+        </button>
+      </nav>
+    </div>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
